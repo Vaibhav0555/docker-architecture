@@ -1,0 +1,1 @@
+use nginx:1.27.0 \n install vim  and go to container and edit the index.html
