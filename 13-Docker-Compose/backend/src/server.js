@@ -8,6 +8,9 @@ const port = process.env.PORT;
 const app = express();
 
 app.use(bodyParser.json());
+app.get("/", (req, res) => {
+  res.json({ message: "Welcome to your key-value store" });
+});
 app.use("/health", healthRouter);
 app.use("/store", keyValueRouter);
 
