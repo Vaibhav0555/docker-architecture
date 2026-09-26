@@ -30,7 +30,7 @@ mongoose
     app.listen(port, () => {
       console.log(`Listening on port ${port}`);
     });
-    console.log("Connected to DB");
+    console.log("Connected to DB!");
   })
   .catch((err) => {
     console.error("Something went wrong");
