@@ -1,11 +1,12 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const { notebookRouter } = require('./routes');
+const bodyParser = require("body-parser");
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.json({ message: "Hello from notebooks-backend!" });
-});
+app.use(bodyParser.json())
+app.use("/api/notebooks", notebookRouter);
 
 const port = process.env.PORT;
 
